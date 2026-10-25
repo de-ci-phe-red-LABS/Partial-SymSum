@@ -1,0 +1,5 @@
+# decaying-symmetry has NO third-party dependencies.
+# It runs on a standard CPython 3.8+ interpreter using only the standard
+# library (random, hashlib).  There is nothing to pip-install.
+#
+# Python >= 3.8
