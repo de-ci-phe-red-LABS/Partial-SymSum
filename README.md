@@ -1,16 +1,29 @@
-# decaying-symmetry
+# Partial-SymSum
 
-Reference implementation and reproducible examples for
+**Reference implementation and reproducible examples for the paper**
 
 > **The Decaying Symmetry: Investigating Partial Symmetry in SymSum**
-> Sahiba Suryawanshi, Ratnesh Shrivastava, Dhiman Saha
 > *de.ci.phe.red Lab, Indian Institute of Technology Bhilai* — INDOCRYPT 2026 (paper #215)
 
-This repository is a small, dependency-free Python artifact meant to help a
-reader of the paper **see the three regimes for themselves** —
-**ZeroSum**, **SymSum**, and **SymSum<sub>part</sub>** (partial symmetry) — on the
-three primitives studied in the paper: **Keccak-*p* / SHA-3**, **Xoodoo / Xoodyak**,
-and **Bash-f / Bash**.
+## Authors
+
+| Author | GitHub | Affiliation |
+|---|---|---|
+| **Sahiba Suryawanshi** | [@suryasahiba](https://github.com/suryasahiba) | de.ci.phe.red Lab, IIT Bhilai |
+| **Ratnesh Shrivastava** | [@ratneshshrivastava31](https://github.com/ratneshshrivastava31) | de.ci.phe.red Lab, IIT Bhilai |
+| **Dhiman Saha** | [@c-i-p-h-e-r](https://github.com/c-i-p-h-e-r) | de.ci.phe.red Lab, IIT Bhilai |
+
+## About
+
+**Partial-SymSum** is a small, dependency-free Python artifact that lets a reader
+of the paper **see the three regimes for themselves** — **ZeroSum**, **SymSum**,
+and **SymSum<sub>part</sub>** (partial symmetry) — on the three primitives studied
+in the paper: **Keccak-*p* / SHA-3**, **Xoodoo / Xoodyak**, and **Bash-f / Bash**.
+
+It shows how the SymSum distinguisher *decays* into partial symmetry as the
+derivative order drops below the algebraic degree, and makes explicit the caveat
+that makes or breaks the experiment: the derivative-variable set must actually
+**reach** the highest degree, or the result collapses to a trivial all-zero sum.
 
 Everything runs on a stock CPython 3.8+ interpreter; there is nothing to install.
 
@@ -91,7 +104,7 @@ symmetric down to order `d−2 = 14`, matching the paper).
 ## 3. Layout
 
 ```
-decaying-symmetry/
+Partial-SymSum/
 ├── primitives/          # the three permutations (reduced-round capable)
 │   ├── keccak.py        #   Keccak-p[1600] + SHA-3-224/256/384/512
 │   ├── xoodoo.py        #   Xoodoo[384] (+ full inverse)
